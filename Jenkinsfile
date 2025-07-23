@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-    enviroment {
+    environment {
         IMAGE_NAME='nnhainam/python-flask'
     }
 
