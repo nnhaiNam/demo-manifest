@@ -35,7 +35,7 @@ pipeline {
                                 cat deployment.yaml
 
                                 git add .
-                                git commit -m 'Done by Jenkins Job changemanifest: ${BUILD_NUMBER}'
+                                git commit -m 'Done by Jenkins Job changemanifest: ${params.DOCKERTAG}'
                                 git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/demo-manifest.git HEAD:main
                             """
                         }
