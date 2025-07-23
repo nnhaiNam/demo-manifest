@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: python-flask
+  name: python-flask
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-flask
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: python-flask
+    spec:
+      containers:
+      - image: nnhainam/python-flask:latest
+        name: python-flask
+        resources: {}
+status: {}
