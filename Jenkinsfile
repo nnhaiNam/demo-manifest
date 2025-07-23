@@ -22,6 +22,10 @@ pipeline {
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                         withCredentials([usernamePassword(credentialsId: 'github',passwordVariable: 'GIT_PASSWORD',usernameVariable: 'GIT_USERNAME')]) {
                             sh """
+                                
+                                git config --global user.email "hainam000090@gmail.com"
+                                git config --global user.name "nnhainam"
+
                                 echo "📄 Before Update:"
                                 cat deployment.yaml
 
