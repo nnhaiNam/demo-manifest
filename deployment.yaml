@@ -18,7 +18,7 @@ spec:
         app: python-flask
     spec:
       containers:
-      - image: nnhainam/python-flask:latest
+      - image: nnhainam/python-flask:2
         name: python-flask
         resources: {}
 status: {}
